@@ -1,13 +1,18 @@
-source 'https://rubygems.org'
+---
+source "https://rubygems.org"
 
+# Jekyll
+# gem "jekyll", "~> 3.9.5"
+gem "github-pages", group: :jekyll_plugins
+
+# Grouped to match gemfiles in the wild
 group :jekyll_plugins do
-  gem 'jekyll'
-  gem 'jekyll-feed'
-  gem 'jekyll-sitemap'
-  gem 'jekyll-redirect-from'
-  gem 'jemoji'
-  gem 'webrick', '~> 1.8'
+  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-seo-tag", "~> 2.1"
 end
 
-gem 'github-pages'
-gem 'connection_pool', '2.5.0'
+# Windows and JRuby support (if using them)
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Performance optimization for large sites
+gem "eventmachine", "~> 1.2", '>= 1.2.7'
